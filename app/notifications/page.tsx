@@ -527,7 +527,7 @@ export default function NotificationsPage() {
                 <tr className="border-b border-border">
                   <th className="px-4 py-3 text-right font-medium text-muted-foreground">الدولة </th>
                   <th className="px-4 py-3 text-right font-medium text-muted-foreground">المعلومات</th>
-                  <th className="px-4 py-3 text-right font-medium text-muted-foreground"> الحالة</th>
+                  <th className="px-4 py-3 text-right font-medium text-muted-foreground"> حالة البطاقة</th>
                   <th className="px-4 py-3 text-right font-medium text-muted-foreground">الوقت</th>
                   <th className="px-4 py-3 text-center font-medium text-muted-foreground">الحالة</th>
                   <th className="px-4 py-3 text-center font-medium text-muted-foreground">كود</th>
